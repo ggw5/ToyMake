@@ -4,7 +4,7 @@ INCLUDE := -I./include
 
 SRC_PATH := ./src
 OBJ_PATH := ./obj
-SRC := $(wildcard $(SRC_PATH)/*.cpp)
+SRC := $(shell find ./ -type f | grep \.cpp)
 OBJ := $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(notdir $(SRC)))
 #$(info SRC is $(SRC))
 #$(info OBJ is $(OBJ))
