@@ -11,8 +11,10 @@ OBJ := $(patsubst %.cpp,$(OBJ_PATH)/%.o,$(notdir $(SRC)))
 
 MAIN := test
 
-all: $(OBJ)
-	$(CC) -o $(MAIN) $(OBJ)
+all: $(MAIN)
+
+$(MAIN): $(OBJ)
+	$(CC) -o $(MAIN) $^
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.cpp
 	$(CC) -c $(CFLAGS) $(INCLUDE) $< -o $@
