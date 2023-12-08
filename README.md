@@ -4,7 +4,7 @@ A simple Makefile template.
 ## Intro
 store ".h" files in path ./include
 
-store ".cpp" files in path ./src
+store ".c" or ".cpp" files in path ./src
 
 ".o" files will be generate and store in path ./obj after make
 
